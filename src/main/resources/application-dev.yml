@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://101.43.41.143:3306/mysql?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8             # 数据库名称
+      username: root
+      password: root  
+      #password: Db@dbtest@2018
+#      type: com.alibaba.druid.pool.DruidDataSource          # 阿里巴巴连接池
+#      #druid 数据源专有配置
+#      min-idle: 5                                           # 数据库连接池的最小维持连接数
+#      initial-size: 5                                       # 初始化连接数
+#      max-total: 5                                          # 最大连接数
+#      max-wait-millis: 200   
