@@ -15,5 +15,6 @@ public class Food {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	private String foodName;
+	private String name;
+	private Integer calorie;
 }
