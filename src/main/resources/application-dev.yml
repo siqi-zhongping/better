@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://101.43.41.143:3306/better?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8             # 数据库名称
+      url: jdbc:mysql://101.43.41.143:3306/award?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8             # 数据库名称
       username: root
       password: 123456  
   jpa:
