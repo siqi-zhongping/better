@@ -2,10 +2,14 @@ server:
   port: 8085
 spring:
   datasource:
+    druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://101.43.41.143:3306/award?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8             # 数据库名称
       username: root
-      password: 123456  
+      password: 123456
+      initial-size:  10
+      max-active:  50
+      min-idle:  10
   jpa:
       show-sql: true # 默认false，在日志里显示执行的sql语句
       database: mysql

@@ -23,6 +23,7 @@ public class PasswordController {
 	private PasswordService passwordService;
 	@GetMapping("/list")
 	public Res list() {
+		System.out.println("=================================");
 		return Res.success(passwordService.list());
 	}
 }
