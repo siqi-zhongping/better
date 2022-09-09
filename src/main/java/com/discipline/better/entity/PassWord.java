@@ -1,21 +1,36 @@
 package com.discipline.better.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Getter;
+import lombok.Setter;
 
-import lombok.Data;
+/**
+ * <p>
+ * 
+ * </p>
+ *
+ * @author zzp
+ * @since 2022-09-09 04:53:12
+ */
+@Getter
+@Setter
+@TableName("password")
+public class Password {
 
-@Data
-@Entity
-@Table(name = "password")
-public class PassWord {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-	private String applicationName;
-	private String userName;
-	private String password;
+    @TableId(value = "id", type = IdType.AUTO)
+    private Integer id;
+
+    @TableField("application_name")
+    private String applicationName;
+
+    @TableField("password")
+    private String password;
+
+    @TableField("user_name")
+    private String userName;
+
+
 }
