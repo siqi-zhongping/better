@@ -10,6 +10,11 @@ spring:
       initial-size:  10
       max-active:  50
       min-idle:  10
+  redis:
+    host: 123.207.86.139
+    password: Redis@rdtest@2018
+    port: 6379
+    database: 0
   jpa:
       show-sql: true # 默认false，在日志里显示执行的sql语句
       database: mysql
