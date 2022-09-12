@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.discipline.better.entity.Password;
+import com.discipline.better.res.R;
 import com.discipline.better.service.PasswordService;
-import com.discipline.res.res.Res;
 
 /**
  * <p>
@@ -31,18 +31,18 @@ public class PasswordController {
 	private PasswordService passwordService;
 	
 	@GetMapping("/list")
-	public Res list() {
+	public R list() {
 		System.out.println("=================================");
 		String regionalismJsonStr = JSON.toJSONString(passwordService.list());
         // 存储数据到缓存
         redisTemplate.opsForValue().set("a", regionalismJsonStr);
-		return Res.success(passwordService.list());
+		return R.ok(passwordService.list());
 	}
 	@GetMapping("/list/redis")
-	public Res listRedis() {
+	public R listRedis() {
 		System.out.println("=================================");
         // 存储数据到缓存
         String regionalismJsonStr = redisTemplate.opsForValue().get("a");
-		return Res.success(JSONObject.parseArray(regionalismJsonStr, Password.class));
+		return R.ok(JSONObject.parseArray(regionalismJsonStr, Password.class));
 	}
 }
